@@ -15,9 +15,11 @@ function htmlRoutes(app){
 
     // if it's anything else, go to the index
     app.get("*", function(req, res){
-        console.log(`${req.url} isn't a valid option, going to index`);
+        //console.log(`${req.url} isn't a valid option, going to index`);
         res.sendFile(path.join(__dirname, "../public/index.html"));
     });
+    
+    return;
 }
 
 module.exports = {

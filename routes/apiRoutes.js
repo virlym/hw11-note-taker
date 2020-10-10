@@ -2,7 +2,6 @@
 const fs = require("fs");
 
 // Note class to maintain structure
-
 class Note{
     constructor(id, title, text){
         this.id = id;
@@ -14,6 +13,7 @@ class Note{
 // handle api calls to the server
 function apiRoutes(app) {
 
+    // grab the stored notes
     const dbJsonData = JSON.parse(fs.readFileSync("./db/db.json","utf8"));
 
     // view all notes
@@ -45,17 +45,21 @@ function apiRoutes(app) {
         }
         writeToJson(dbJsonData);
     });
+
+    return;
 }
 
 // save note array to the json file
 function writeToJson (data){
     fs.writeFileSync("./db/db.json", JSON.stringify(data, null, 2), function(err) {
         if (err) {
-            return console.log(err);
+            throw err;
         }
-    })
-};
+    });
+
+    return;
+}
 
 module.exports = {
     apiRoutes : apiRoutes
-};
+}

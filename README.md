@@ -31,9 +31,13 @@
   <br><br>
   
   ## **Usage**
-  !! To be filled in when the project has working code !!
+  Write and save notes to a JSON file that can be retrieved for later use.
   
-  Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+  [Heroku Deployed](https://hw11-note-taker-heroku.herokuapp.com/)
+
+  ![HomePage](./public/assets/png/homePage.PNG)
+  ![NotePage](./public/assets/png/savedNotes.PNG)
+  
   <br><br>
   
   ## **License**
@@ -52,10 +56,12 @@
   
   <br><br>
   
-  ## **Tests**
-  ```sh
-  npm run test
-  ```
+  ## **Technology**
+  - [JavaScript](https://www.javascript.com/)
+  - [Express](https://expressjs.com/)
+  - [File System](https://nodejs.org/api/fs.html)
+  - [Path](https://nodejs.org/api/path.html)
+
   <br><br>
   
   ## **Questions**

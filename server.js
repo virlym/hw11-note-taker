@@ -3,9 +3,9 @@
 // Series of npm packages that we will use to give our server useful functionality
 // ==============================================================================
 
-var express = require("express");
-var apiRoutes = require("./routes/apiRoutes.js");
-var htmlRoutes = require("./routes/htmlRoutes.js");
+const express = require("express");
+const apiRoutes = require("./routes/apiRoutes.js");
+const htmlRoutes = require("./routes/htmlRoutes.js");
 
 // ==============================================================================
 // EXPRESS CONFIGURATION
@@ -13,14 +13,14 @@ var htmlRoutes = require("./routes/htmlRoutes.js");
 // ==============================================================================
 
 // Create an "express" server for node
-var app = express();
+const app = express();
 
 // Utilize external files in the 'public' for the html
 app.use(express.static("public"))
 
 // Sets an initial port. We"ll use this later in our listener
 // process.env.PORT for Heroku, or 8080 for dev
-var PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8080;
 
 // Sets up the Express app to handle json data parsing
 app.use(express.urlencoded({ extended: true }));
@@ -42,4 +42,5 @@ htmlRoutes.htmlRoutes(app);
 
 app.listen(PORT, function() {
   console.log("App listening on PORT: " + PORT);
+  return;
 });
